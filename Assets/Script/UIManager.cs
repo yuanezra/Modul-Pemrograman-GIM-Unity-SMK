@@ -25,8 +25,8 @@ public class UIManager : MonoBehaviour
             playerHealthBar.rectTransform.sizeDelta = size;
         }
 
-
-        if(gameOverUI && player.health <= 0)
+        
+        if(gameOverUI && (player.health <= 0 || GameManager.isGameOver))
         {
             gameOverUI.SetActive(true);
         }

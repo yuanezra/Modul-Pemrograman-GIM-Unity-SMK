@@ -6,10 +6,10 @@ public class EnemyMushroom : EnemyController
 {
     [Header("Mushroom")]
     [SerializeField] SpriteRenderer graphic;
-    [SerializeField] float speed = 5;
+    // [SerializeField] float speed = 5;
     [SerializeField] private List<Transform> patrolPoints;
 
-    private int currentPatrolPointIndex = 0;
+    // private int currentPatrolPointIndex = 0;
 
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] private float bulletSpeed;

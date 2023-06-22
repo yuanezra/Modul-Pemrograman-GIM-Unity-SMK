@@ -10,8 +10,8 @@ public class EnemyController : MonoBehaviour
 
     public Transform attackTarget;
 
-    [Header("Configuration")]
-    [SerializeField] private float moveSpeed = 2.5f;
+    // [Header("Configuration")]
+    // [SerializeField] private float moveSpeed = 2.5f;
 
     void Update()
     {
