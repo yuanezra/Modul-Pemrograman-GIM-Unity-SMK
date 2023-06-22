@@ -1625,6 +1625,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1742725871, guid: 1a56fa71de066f54f920379ae52504fc, type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5066396716432248106, guid: 1a56fa71de066f54f920379ae52504fc, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5814,11 +5818,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f833ceab326354a9a9253d0be957ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealthBar: {fileID: 0}
-  playerHealthBarFullX: 78
-  gameOverUI: {fileID: 0}
-  levelCompleteUI: {fileID: 0}
-  player: {fileID: 0}
+  playerHealthBar: {fileID: 279561778}
+  playerHealthBarFullX: 100
+  gameOverUI: {fileID: 1490567542}
+  levelCompleteUI: {fileID: 1510199986}
+  player: {fileID: 2125817033}
 --- !u!1 &1515783184
 GameObject:
   m_ObjectHideFlags: 0
