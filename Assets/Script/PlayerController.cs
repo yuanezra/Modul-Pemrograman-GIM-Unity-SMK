@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private int velocityY = 0;
     private bool moveLeft, moveRight;
 
+    public float move;
+
     [Header("Configuration")]
     [SerializeField] private float moveSpeed = 2.5f;
     [SerializeField] private float jumpForce = 5.0f;
@@ -45,6 +47,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb2;
     private Animator animator;
+
 
     void Awake()
     {
@@ -111,10 +114,10 @@ public class PlayerController : MonoBehaviour
     public void MovementController()
     {
 
-        float x = Input.GetAxisRaw("Horizontal");
+        // float x = Input.GetAxisRaw("Horizontal");
 
         Vector2 direction = rb2.velocity;
-        direction.x = x * moveSpeed;
+        direction.x = move * moveSpeed;
 
         rb2.velocity = direction;
 
@@ -255,20 +258,57 @@ public class PlayerController : MonoBehaviour
 
     public void MoveLeft()
     {
-        moveLeft = true;
-        AnimationController();
+        Vector2 direction = rb2.velocity;
+        direction.x = -1 * moveSpeed;
+
+        rb2.velocity = direction;
+
+        //sprite dibalik ketika arahnya ke kiri
+        if (direction.x < 0)
+        {
+            graphic.flipX = true;
+        }
+        else if (direction.x > 0)
+        {
+            graphic.flipX = false;
+        }
     }
 
     public void MoveRight()
     {
-        moveRight = true;
-        AnimationController();
+        Vector2 direction = rb2.velocity;
+        direction.x = 1 * moveSpeed;
+
+        rb2.velocity = direction;
+
+        //sprite dibalik ketika arahnya ke kiri
+        if (direction.x < 0)
+        {
+            graphic.flipX = true;
+        }
+        else if (direction.x > 0)
+        {
+            graphic.flipX = false;
+        }
+    }
+
+    public void MoveLeftBool()
+    {
+        //leftBool = true;
+        move = -1;
+    }
+
+    public void MoveRightBool()
+    {
+        //rightBool = true;
+        move = 1;
     }
 
     public void ResetMove()
     {
         moveLeft = false;
         moveRight = false;
+        move = 0;
         AnimationController();
     }
 

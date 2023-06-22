@@ -5819,7 +5819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealthBar: {fileID: 279561778}
-  playerHealthBarFullX: 100
+  playerHealthBarFullX: 220
   gameOverUI: {fileID: 1490567542}
   levelCompleteUI: {fileID: 1510199986}
   player: {fileID: 2125817033}
